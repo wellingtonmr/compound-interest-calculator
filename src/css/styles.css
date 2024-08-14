@@ -3,3 +3,26 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+html {
+	font-family: Tahoma;
+}
+
+header {
+	width: 100%;
+	padding: 20px 0;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.header-center {
+	width: 50%;
+	margin: auto;
+}
+
+header h1 {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
