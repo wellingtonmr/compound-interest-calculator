@@ -20,7 +20,46 @@
 		</header>
 
 		<main>
+			<section class="info">
+				<h2>What is compound interest?</h2>
+				<p>Compound interest is interest that applies not only to the initial principal of an investment or a loan, but also to the accumulated interest from previous periods. In other words, compound interest involves earning, or owing, interest on your interest.</p>
+			</section>
 
+			<section class="calc">
+				<div class="container">
+					<label for="ini-invest">Initial Investment</label><br />
+					<input type="number" id="ini-invest">
+				</div>
+
+				<div class="container">
+					<label for="rate">Rate</label><br />
+					<div class="border">
+						<input type="number" id="rate">
+						<select>
+							<option>annual</option>
+							<option>monthly</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="container">
+					<label for="mon-invest">Monthly Investment</label><br />
+					<input type="number" id="mon-invest">
+				</div>
+
+				<div class="container">
+					<label for="time">Period</label><br />
+					<div class="border">
+						<input type="number" id="time">
+						<select>
+							<option>year(s)</option>
+							<option>month(s)</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<section id="result"></section>
 		</main>
 
 		<footer>

@@ -26,3 +26,51 @@ header h1 {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
+
+main {
+	width: 60%;
+	margin: 2% auto;
+	padding: 2%;
+	border: 1px solid gray;
+}
+
+main h2 {
+	margin-bottom: 2%;
+}
+
+main section {
+	margin-bottom: 5%;
+}
+
+.container {
+	display: inline-block;
+	width: 49%;
+	margin-bottom: 2%;
+}
+
+.container input {
+	width: 100%;
+	min-width: 300px;
+	font-size: 1.5rem;
+}
+
+.border {
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding: 1px 0;
+	white-space: nowrap;
+}
+
+#rate, #time{
+	max-width: 78%;
+	min-width: 0;
+	border: none;
+}
+
+select {
+	width: 20%;
+	min-width: 9ch;
+	padding: 2px 0;
+	border: none;
+	border-left: 1px solid gray;
+}
