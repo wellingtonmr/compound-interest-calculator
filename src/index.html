@@ -8,7 +8,7 @@
 		<meta name="description" content="A simple compound interst calculator">
 		<meta name="author" content="Wellington Ribeiro">
 		<link rel="stylesheet" href="css\styles.css">
-		<script url="scripts\script.js"></script>
+		<script src="scripts\script.js"></script>
 	</head>
 
 	<body>
@@ -28,13 +28,13 @@
 			<section class="calc">
 				<div class="container">
 					<label for="ini-invest">Initial Investment</label><br />
-					<input type="number" id="ini-invest">
+					<input type="number" id="ini-invest" onchange="formatMoney('ini-invest')">
 				</div>
 
 				<div class="container">
 					<label for="rate">Rate</label><br />
 					<input type="number" id="rate">
-					<select>
+					<select id="rate-unit">
 						<option>annual</option>
 						<option>monthly</option>
 					</select>
@@ -42,20 +42,24 @@
 
 				<div class="container">
 					<label for="mon-invest">Monthly Investment</label><br />
-					<input type="number" id="mon-invest">
+					<input type="number" id="mon-invest" onchange="formatMoney('mon-invest')">
 				</div>
 
 				<div class="container">
 					<label for="time">Period</label><br />
 					<input type="number" id="time">
-					<select>
+					<select id="time-unit">
 						<option>year(s)</option>
 						<option>month(s)</option>
 					</select>
 				</div>
+
+				<button onclick="results()">Calculate</button>
+
 			</section>
 
-			<section id="result"></section>
+			<section id="result">
+			</section>
 		</main>
 
 		<footer>
