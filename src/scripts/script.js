@@ -5,16 +5,19 @@ function formatMoney(id) {
 }
 
 function results() {
+
+	document.getElementById("result").innerHTML = "";
+
 	let iniInvest = parseFloat(document.getElementById("ini-invest").value);
 	let rate = parseFloat(document.getElementById("rate").value);
 	let monInvest = parseFloat(document.getElementById("mon-invest").value);
 	let time = parseFloat(document.getElementById("time").value);
 	
-	if (document.getElementById("rate-unit").value = "annual") {
+	if (document.getElementById("rate-unit").value == "annual") {
 		rate /= 12;
 	}
 
-	if(document.getElementById("time-unit").value = "year(s)") {
+	if(document.getElementById("time-unit").value == "year(s)") {
 		time *= 12;
 	}
 
