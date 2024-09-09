@@ -70,7 +70,25 @@ select {
 	border: 1px solid gray;
 }
 
+.totals {
+	display: inline-block;
+	width: 30%;
+	margin-right: 3%;
+	text-align: center;
+	padding: 1rem 2rem;
+	background-color: lightgray;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+.red {
+	margin-right: 0;
+	background-color: red;
+	color: white;
+}
+
 #result-table {
+	margin-top: 2%;
 	text-align: center;
 	border: 1px solid black;
 	border-spacing: 0;
@@ -82,6 +100,10 @@ select {
 
 #result-table td, th{
 	width: 10rem;
+}
+
+.month {
+	width: 8rem;
 }
 
 .gray {
