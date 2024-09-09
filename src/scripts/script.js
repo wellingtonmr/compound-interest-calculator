@@ -65,3 +65,10 @@ function results() {
 	document.getElementById("total-sum").innerText +=
 		`U$ ${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 }
+
+function clearInput() {
+	document.getElementById("ini-invest").value = "";
+	document.getElementById("rate").value = "";
+	document.getElementById("mon-invest").value = "";
+	document.getElementById("time").value = "";
+}

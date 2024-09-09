@@ -25,7 +25,7 @@
 				<p>Compound interest is interest that applies not only to the initial principal of an investment or a loan, but also to the accumulated interest from previous periods. In other words, compound interest involves earning, or owing, interest on your interest.</p>
 			</section>
 
-			<section class="calc">
+			<section id="calc">
 				<div class="container">
 					<label for="ini-invest">Initial Investment</label><br />
 					<input type="number" id="ini-invest" onchange="formatMoney('ini-invest')">
@@ -54,7 +54,10 @@
 					</select>
 				</div>
 
-				<button onclick="results()">Calculate</button>
+				<div class="buttons">
+					<button class="btn" onclick="results()">Calculate</button>
+					<button class="btn btn--clear" onclick="clearInput()">Clear</button>
+				</div>
 
 			</section>
 
