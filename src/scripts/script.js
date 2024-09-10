@@ -27,14 +27,16 @@ function results() {
 	let interest = 0.0;
 
 	document.getElementById("result").innerHTML =
-		`<div class="totals" id="total-invested">
-			Invested:<br />
-		</div>
-		<div class="totals" id="total-interest">
-			Interest:<br />
-		</div>
-		<div class="totals red" id="total-sum">
-			Final Sum:<br />
+		`<div class="totals">
+			<div class="total-div" id="total-invested">
+				Invested:
+			</div>
+			<div class="total-div" id="total-interest">
+				Interest:
+			</div class="total-div">
+			<div class="total-div red" id="total-sum">
+				Final Sum:
+			</div>
 		</div>
 		<table id="result-table">
 			<tr>
@@ -61,12 +63,14 @@ function results() {
 				<td><span>U$</span>${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
 			</tr>`
 	}
+	document.getElementById("result-table").innerHTML += `</div>`;
+
 	document.getElementById("total-invested").innerHTML +=
-		`U$ ${invested.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+		` U$${invested.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 	document.getElementById("total-interest").innerText +=
-		`U$ ${interest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+		` U$${interest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 	document.getElementById("total-sum").innerText +=
-		`U$ ${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+		` U$${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 }
 
 function clearInput() {

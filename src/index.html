@@ -31,7 +31,7 @@
 					<input type="number" id="ini-invest" onchange="formatMoney('ini-invest')">
 				</div>
 
-				<div class="container">
+				<div class="container container--double">
 					<label for="rate">Rate</label><br />
 					<input type="number" id="rate">
 					<select id="rate-unit">
@@ -45,7 +45,7 @@
 					<input type="number" id="mon-invest" onchange="formatMoney('mon-invest')">
 				</div>
 
-				<div class="container">
+				<div class="container container--double">
 					<label for="time">Period</label><br />
 					<input type="number" id="time">
 					<select id="time-unit">
@@ -54,12 +54,12 @@
 					</select>
 				</div>
 
+			</section>
+
 				<div class="buttons">
 					<button class="btn" onclick="results()">Calculate</button>
 					<button class="btn btn--clear" onclick="clearInput()">Clear</button>
 				</div>
-
-			</section>
 
 			<section id="result">
 			</section>
