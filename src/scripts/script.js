@@ -38,15 +38,17 @@ function results() {
 				Final Sum:
 			</div>
 		</div>
-		<table id="result-table">
-			<tr>
-				<th>Month</th>
-				<th>Invested</th>
-				<th>Interest</th>
-				<th>Total Int.</th>
-				<th>Total</th>
-			</tr>
-		</table>`;
+		<div id="result-table">
+			<div class="table-row title">
+				<div class="table-content">Month</div>
+				<div class="table-content">Invested</div>
+				<div class="table-content">Interest</div>
+				<div class="table-content">Total Int.</div>
+				<div class="table-content">Total</div>
+			</div>
+			<div id="table-container">
+			</div>
+		</div>`;
 
 	for(let i = 0; i < time; i++) {
 		monInterest = finValue * (rate/100);
@@ -54,14 +56,14 @@ function results() {
 		interest += monInterest;
 		finValue += monInvest;
 		invested += monInvest;
-		document.getElementById("result-table").innerHTML +=
-			`<tr ${i%2 == 0 ? 'class="white"' : 'class="gray"' }>
-				<td class="month">${i+1}</td>
-				<td><span>U$</span>${invested.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-				<td><span>U$</span>${monInterest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-				<td><span>U$</span>${interest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-				<td><span>U$</span>${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-			</tr>`
+		document.getElementById("table-container").innerHTML +=
+			`<div class="table-row ${i%2 == 0 ? 'white"' : 'gray"' }>
+				<div class="table-content">${i+1}</div>
+				<div class="table-content"><span>U$</span>${invested.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+				<div class="table-content"><span>U$</span>${monInterest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+				<div class="table-content"><span>U$</span>${interest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+				<div class="table-content"><span>U$</span>${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+			</div>`
 	}
 	document.getElementById("result-table").innerHTML += `</div>`;
 

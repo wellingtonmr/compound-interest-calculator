@@ -131,30 +131,38 @@ select {
 	color: white;
 }
 
+#table-container {
+	max-height: min(80vh, calc(20 * 1.2em));
+	overflow:auto;
+}
+
 #result-table {
 	margin-top: 2%;
-	text-align: center;
+	font-size: max(8px, min(16px, 2vw));
 	border: 1px solid black;
 	border-spacing: 0;
 }
 
-#result-table th{
+.table-row {
+	display: grid;
+	grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+	gap: 0;
+}
+
+.title{
 	background-color: rgb(255, 100, 100);
 }
 
-#result-table td, th{
-	width: 10rem;
-}
-
-.month {
-	width: 8rem;
+.table-content {
+	display: inline-block;
+	text-align: center;
 }
 
 .gray {
 	background-color: rgb(200, 200, 200);
 }
 
-#result-table span {
+.result-table span {
 	font-size: 0.8rem;
 	color: gray;
 }
