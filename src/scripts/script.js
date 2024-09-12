@@ -51,7 +51,7 @@ function results() {
 			<div class="total-div" id="total-interest">
 			Interest:
 			</div class="total-div">
-			<div class="total-div red" id="total-sum">
+			<div class="total-div attention" id="total-sum">
 			Final Sum:
 			</div>
 			</div>
