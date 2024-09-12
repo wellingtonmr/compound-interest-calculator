@@ -150,7 +150,8 @@ section {
 .attention {
 	margin-right: 0;
 	background-color: var(--attention-color);
-	color: var(--font-color);
+	color: white;
+	font-weight: bold;
 }
 
 #table-container {
