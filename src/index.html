@@ -12,60 +12,64 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="header-center">
-				<img src="img\logo.png" alt="logo">
-				<h1 class="header-logo">Compound Interest Calculator</h1>
+		<div class="page-container">
+			<div class="content-wrapper">
+				<header>
+					<div class="header-center">
+						<img src="img\logo.png" alt="logo">
+						<h1 class="header-logo">Compound Interest Calculator</h1>
+					</div>
+				</header>
+
+				<main>
+					<section class="info">
+						<h2>What is compound interest?</h2>
+						<p>Compound interest is interest that applies not only to the initial principal of an investment or a loan, but also to the accumulated interest from previous periods. In other words, compound interest involves earning, or owing, interest on your interest.</p>
+					</section>
+
+					<section id="calc">
+						<div class="container">
+							<label for="ini-invest">Initial Investment</label><br />
+							<input type="number" id="ini-invest" onchange="formatMoney('ini-invest')">
+						</div>
+
+						<div class="container container--double">
+							<label for="rate">Rate</label><br />
+							<input type="number" id="rate">
+							<select id="rate-unit">
+								<option>annual</option>
+								<option>monthly</option>
+							</select>
+						</div>
+
+						<div class="container">
+							<label for="mon-invest">Monthly Investment</label><br />
+							<input type="number" id="mon-invest" onchange="formatMoney('mon-invest')">
+						</div>
+
+						<div class="container container--double">
+							<label for="time">Period</label><br />
+							<input type="number" id="time">
+							<select id="time-unit">
+								<option>year(s)</option>
+								<option>month(s)</option>
+							</select>
+						</div>
+
+					</section>
+
+					<div class="buttons">
+						<button class="btn" onclick="results()">Calculate</button>
+						<button class="btn btn--clear" onclick="clearInput()">Clear</button>
+					</div>
+
+					<section id="result">
+					</section>
+				</main>
 			</div>
-		</header>
-
-		<main>
-			<section class="info">
-				<h2>What is compound interest?</h2>
-				<p>Compound interest is interest that applies not only to the initial principal of an investment or a loan, but also to the accumulated interest from previous periods. In other words, compound interest involves earning, or owing, interest on your interest.</p>
-			</section>
-
-			<section id="calc">
-				<div class="container">
-					<label for="ini-invest">Initial Investment</label><br />
-					<input type="number" id="ini-invest" onchange="formatMoney('ini-invest')">
-				</div>
-
-				<div class="container container--double">
-					<label for="rate">Rate</label><br />
-					<input type="number" id="rate">
-					<select id="rate-unit">
-						<option>annual</option>
-						<option>monthly</option>
-					</select>
-				</div>
-
-				<div class="container">
-					<label for="mon-invest">Monthly Investment</label><br />
-					<input type="number" id="mon-invest" onchange="formatMoney('mon-invest')">
-				</div>
-
-				<div class="container container--double">
-					<label for="time">Period</label><br />
-					<input type="number" id="time">
-					<select id="time-unit">
-						<option>year(s)</option>
-						<option>month(s)</option>
-					</select>
-				</div>
-
-			</section>
-
-				<div class="buttons">
-					<button class="btn" onclick="results()">Calculate</button>
-					<button class="btn btn--clear" onclick="clearInput()">Clear</button>
-				</div>
-
-			<section id="result">
-			</section>
-		</main>
-
-		<footer>
-
-		</footer>
+			<footer>
+				<p>&copy; All rights reserved to Wellington Ribeiro.</p>
+				<p>contact: <a href="mailto:wellingtonmoura@gmail.com">wellingtonmourar@gmail.com</a></p>
+			</footer>
+		</div>
 </html>
