@@ -85,11 +85,11 @@ function results() {
 		document.getElementById("result-table").innerHTML += `</div>`;
 
 		document.getElementById("total-invested").innerHTML +=
-			` U$${invested.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-		document.getElementById("total-interest").innerText +=
-			` U$${interest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-		document.getElementById("total-sum").innerText +=
-			` U$${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+			`<br /> U$ ${invested.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+		document.getElementById("total-interest").innerHTML +=
+			`<br /> U$ ${interest.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+		document.getElementById("total-sum").innerHTML +=
+			`<br /> U$ ${finValue.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 	}
 }
 
